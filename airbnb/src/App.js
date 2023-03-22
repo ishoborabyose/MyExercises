@@ -13,7 +13,9 @@ export default function App() {
     <div>
       <Navbar />
       <Hero />
-      <section className="cards-list">{cards}</section>
+      <section className="max-w-md mx-auto grid grid-cols-3 gap-40 items-center mb-5">
+        {cards}
+      </section>
     </div>
   );
 }

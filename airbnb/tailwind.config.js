@@ -6,6 +6,9 @@ module.exports = {
       boxShadow: {
         "shadow-nav": "0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);",
       },
+      colors: {
+        "dark-gray": "#918e9b",
+      },
     },
   },
   plugins: [],

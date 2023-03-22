@@ -1,9 +1,10 @@
 import React from "react";
+import airBnb from "../assets/airbnb.png";
 
 export default function Navbar() {
   return (
-    <nav className="shadow-shadow-nav  h-[70px] flex py-[20px] px-[36px]">
-      <img src="../assets/airbnb.png" className="max-w-[100px]" />
+    <nav className="shadow-shadow-nav h-20 flex py-5 px-9">
+      <img src={airBnb} className="max-w-full" alt="logo" />
     </nav>
   );
 }

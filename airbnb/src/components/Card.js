@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Card(props) {
+const Card = (props) => {
   let badgeText;
   if (props.openSpots === 0) {
     badgeText = "SOLD OUT";
@@ -9,21 +9,22 @@ export default function Card(props) {
   }
 
   return (
-    <div className="w-[175px] text-[12px] flex flex-auto flex-col relative">
+    <div className="w-44 text-xs flex flex-auto flex-col relative">
       {badgeText && (
-        <div className="absolute top-[6px] left-[6px] bg-white py-[5px] px-[7px] rounded-sm font-bold">
+        <div className="absolute top-2 left-2 bg-white py-1 px-2 rounded-sm font-bold">
           {badgeText}
         </div>
       )}
       <img
-        src={`../assets/${props.coverImg}`}
-        className="w-[100%] rounded-[9px] mb-[9px]"
+        src={`/assets/${props.coverImg}`}
+        alt="cover"
+        className="rounded-lg mb-2 h-80 object-cover"
       />
       <div className="flex items-center">
-        <img src="../assets/Star.png" className="h-[14px]" />
+        <img src="/assets/Star.png" alt="star" className="h-3" />
         <span>{props.stats.rating}</span>
-        <span className="text-[#918e9b]">({props.stats.reviewCount}) • </span>
-        <span className="text-[#918e9b]">{props.location}</span>
+        <span className="text-dark-gray">({props.stats.reviewCount}) • </span>
+        <span className="text-dark-gray">{props.location}</span>
       </div>
       <p className="overflow-hidden text-ellipsis">{props.title}</p>
       <p className="mt-auto">
@@ -31,4 +32,6 @@ export default function Card(props) {
       </p>
     </div>
   );
-}
+};
+
+export default Card;
